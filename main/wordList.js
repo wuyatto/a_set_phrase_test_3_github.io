@@ -137,7 +137,7 @@ export const wordList = [
     { word: "decide to do", meaning: "决定做…(decide)" },
     { word: "in front of", meaning: "在(外部的)…前面(front)" },
     { word: "in the front of", meaning: "在…(内部的)前面(front)" },
-    { word: "lt takes sb. 时间/金钱 to do", meaning: "某人花费多长时间/多少钱做…(take)" },
+    { word: "it takes sb. 时间/金钱 to do", meaning: "某人花费多长时间/多少钱做…(take)" },
     { word: "in other words", meaning: "换言之(words)" },
     { word: "have the potential to do", meaning: "有潜力做…(have)" },
     { word: "live a(n) (adj.) life", meaning: "过着…的生活(life)" },
