@@ -2,7 +2,6 @@ import { wordList } from "./main/wordList.js";
 
 window.onload = function () {
     const slider = document.getElementById('word-slider');
-    const label = document.getElementById('slider-label');
 
     let groupNumber = parseInt(wordList.length / 10);
     let restNumber = wordList.length % 10;
@@ -12,8 +11,6 @@ window.onload = function () {
     }
 
     slider.max = groupNumber;
-    label.textContent = slider.value;
-
     updateLabel(slider.value);
     normalBgColor(slider.value);
 
