@@ -134,10 +134,12 @@ function displayWord() {
 
 // 检查用户输入
 function checkAnswer() {
-    const input = inputLine.innerText.trim().toLowerCase();
-    let correct = (input === correctAnswers);
+    const input = inputLine.innerText.replace(/[^a-zA-Z]/g, '').toLowerCase();
+    const correctAnswerscmp = correctAnswers.replace(/[^a-zA-Z]/g, '').toLowerCase()
+    let correct = (input === correctAnswerscmp);
 
     if (correct) {
+        inputLine.innerText = correctAnswers;
         inputLine.setAttribute("contenteditable", "false");
         inputLine.style.color = "green";
     } else {
