@@ -93,13 +93,16 @@ function createCircles() {
 // 更新小圆圈的状态
 function updateCircles(index, singal) {
     const circles = document.querySelectorAll('.circle');
-
-    circles[index].classList.remove('active');
     // current 5; check 6
     if (singal === 5) {
+        circles[index].classList.remove('wrong');
         circles[index].classList.add('active');
     } else if (singal === 6 && selectedWords[index] === '✔') {
+        circles[index].classList.remove('active');
         circles[index].classList.add('completed');
+    } else if (singal === 6) {
+        circles[index].classList.remove('active');
+        circles[index].classList.add('wrong');
     }
 }
 
@@ -134,8 +137,8 @@ function displayWord() {
 
 // 检查用户输入
 function checkAnswer() {
-    const input = inputLine.innerText.replace(/[^a-zA-Z]/g, '').toLowerCase();
-    const correctAnswerscmp = correctAnswers.replace(/[^a-zA-Z]/g, '').toLowerCase()
+    const input = inputLine.innerText.replace(/[^a-zA-Z]/g, '').toLowerCase().replace(/sb|sth/g, '');
+    const correctAnswerscmp = correctAnswers.replace(/[^a-zA-Z]/g, '').toLowerCase().replace(/sb|sth/g, '');
     let correct = (input === correctAnswerscmp);
 
     if (correct) {
@@ -168,13 +171,12 @@ function checkAnswer() {
             feedback.style.color = "green";
             submit.textContent = "再次练习";
         }
-
-        updateCircles(currentIndex, 6);     // current 5; check 6
     } else {
         bingo = false;
         feedback.innerHTML = `错误，请修正！<br>答案: ${correctAnswers}`;
         feedback.style.color = "red";
     }
+    updateCircles(currentIndex, 6);     // current 5; check 6
 }
 
 function nextWord() {
