@@ -44,9 +44,17 @@ section {
 }
 
 .circle.completed {
+    transform: scale(1.2);
     background-color: #4CAF50;
     box-shadow: 0 0 10px rgba(76, 175, 80, 0.8);
     /* 添加发光效果 */
+}
+
+.circle.wrong {
+    transform: scale(1.2);
+    background-color: #FF5722;
+    box-shadow: 0 0 10px rgba(255, 87, 34, 0.8);
+    /* 发光效果 */
 }
 
 #practice-view {
