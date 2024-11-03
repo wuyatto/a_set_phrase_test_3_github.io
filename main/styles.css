@@ -6,6 +6,15 @@ body {
     /* Chrome 10-25, Safari 5.1-6 */
     background: linear-gradient(to left, #C4E0E5, #4CA1AF);
     /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+    background-image: url("img/1.jpg");
+    background-size: cover;
+    /* 让图片覆盖整个元素区域 */
+    background-position: center;
+    /* 将图片居中 */
+    background-repeat: no-repeat;
+    /* 防止图片重复 */
+
     display: flex;
     justify-content: center;
     align-items: center;
@@ -16,9 +25,11 @@ body {
 
 section {
     text-align: center;
-    background-image:
+    /* background-image:
         radial-gradient(circle 506px at 50.6% 16.5%,
-            rgba(239, 252, 250, 1) 5.5%, rgba(154, 192, 206, 1) 100.2%);
+            rgba(239, 252, 250, 1) 5.5%, rgba(154, 192, 206, 1) 100.2%); */
+    background-color: rgba(255, 255, 255, 0.7);
+    /* 半透明白色背景 */
     border-radius: 10px;
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
 }
@@ -32,14 +43,14 @@ section {
     width: 10px;
     height: 10px;
     border-radius: 50%;
-    background-color: lightgray;
+    background-color: #a9a9a9;
     margin: 5px 5px 0;
     transition: transform 0.3s, background-color 0.3s;
 }
 
 .circle.active {
     transform: scale(1.2);
-    background-color: skyblue;
+    background-color: #5ca2d1;
     box-shadow: 0 0 10px rgba(135, 206, 250, 0.8);
 }
 
