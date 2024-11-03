@@ -1,4 +1,5 @@
 import { wordList } from "./wordList.js";
+import { imgList } from "./imgList.js";
 
 let selectedWords = [];
 let currentIndex = 0;
@@ -40,6 +41,9 @@ inputLine.addEventListener("input", function () {
 
 // 初始化页面
 function init() {
+    const randomImage = imgList[Math.floor(Math.random() * imgList.length)];
+    document.body.style.backgroundImage = `url("${randomImage}")`;
+
     practiceView.classList.remove('hidden');
     practiceView.classList.add('fade-in');
 
