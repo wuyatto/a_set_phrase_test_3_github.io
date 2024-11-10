@@ -6,7 +6,15 @@ let currentIndex = 0;
 let correctAnswers = {};
 let correctNumber = 0;
 let bingo = true;
+let groupNumber = parseInt(wordList.length / 10);
+let restNumber = wordList.length % 10;
+let nextGroup = null;
 
+if (restNumber > 0) {
+    groupNumber++;
+}
+
+const nextIndex = parseInt(getQueryParameter('group')) + 1;
 const submit = document.getElementById("submit");
 const practiceView = document.getElementById('practice-view');
 const inputLine = document.getElementById("input-line");
@@ -77,6 +85,9 @@ function init() {
         if (event.key === "Enter") {
             if (submit.textContent === "下一个") {
                 nextWord();
+            } else if (nextGroup !== null) {
+                setQueryParameter('group', nextIndex);
+                location.reload();
             } else if (submit.textContent === "再次练习") {
                 location.reload();
             }
@@ -108,6 +119,13 @@ function updateCircles(index, singal) {
         circles[index].classList.remove('active');
         circles[index].classList.add('wrong');
     }
+}
+
+// 更新URL参数
+function setQueryParameter(param, value) {
+    const url = new URL(window.location);
+    url.searchParams.set(param, value);
+    window.history.replaceState({}, '', url);
 }
 
 // 获取URL参数
@@ -174,6 +192,16 @@ function checkAnswer() {
             feedback.innerHTML = "恭喜你，成功通关！";
             feedback.style.color = "green";
             submit.textContent = "再次练习";
+
+            if (nextIndex <= groupNumber) {
+                nextGroup = document.createElement("button");
+                nextGroup.textContent = "下一组";
+                nextGroup.addEventListener("click", function () {
+                    setQueryParameter('group', nextIndex);
+                    location.reload();
+                })
+                submit.parentNode.append(nextGroup);
+            }
         }
     } else {
         bingo = false;
