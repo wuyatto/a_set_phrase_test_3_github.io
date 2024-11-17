@@ -195,17 +195,17 @@ function checkAnswer() {
 
             if (nextIndex <= groupNumber) {
                 nextGroup = document.createElement("button");
-                nextGroup.textContent = "下一组";
+                nextGroup.textContent = "去下一组";
                 nextGroup.addEventListener("click", function () {
                     setQueryParameter('group', nextIndex);
                     location.reload();
                 })
-                submit.parentNode.append(nextGroup);
+                submit.parentNode.insertBefore(nextGroup, submit);
             }
         }
     } else {
         bingo = false;
-        feedback.innerHTML = `错误，请修正！<br>答案: ${correctAnswers}`;
+        feedback.innerHTML = `${correctAnswers}`;
         feedback.style.color = "red";
     }
     updateCircles(currentIndex, 6);     // current 5; check 6
