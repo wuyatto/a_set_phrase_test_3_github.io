@@ -322,7 +322,7 @@ export const wordList = [
     { word: "go out", meaning: "外出;出去(go)" },
     { word: "take steps", meaning: "采取措施(steps)" },
     { word: "take action", meaning: "采取措施(action)" },
-    { word: "suffer traffic jam", meaning: "遭遇交通拥堵(suffer)" },
+    { word: "suffer from traffic jam", meaning: "遭遇交通拥堵(suffer)" },
     { word: "place of interest", meaning: "景点;名胜古迹(place)" },
     { word: "as a result", meaning: "因此(as)" },
     { word: "go camping", meaning: "去露营(go)" },
