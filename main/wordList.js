@@ -325,7 +325,7 @@ export const wordList = [
     { word: "suffer traffic jam", meaning: "遭遇交通拥堵(suffer)" },
     { word: "place of interest", meaning: "景点;名胜古迹(place)" },
     { word: "as a result", meaning: "因此(as)" },
-    { word: "go cammping", meaning: "去露营(go)" },
+    { word: "go camping", meaning: "去露营(go)" },
     { word: "go fishing", meaning: "去钓鱼(go)" },
     { word: "go hiking", meaning: "去远足(go)" },
     { word: "go shopping", meaning: "去购物(go)" },
