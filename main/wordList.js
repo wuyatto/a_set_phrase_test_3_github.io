@@ -401,7 +401,7 @@ export const wordList = [
     { word: "die away", meaning: "逐渐消失 (die)" },
     { word: "give away", meaning: "捐赠(give)" },
     { word: "pass away", meaning: "去世(pass)" },
-    { word: "put away", meaning: "收拾起来(carry)" },
+    { word: "put away", meaning: "收拾起来(put)" },
     { word: "send away", meaning: "走开(send)" },
     { word: "take away", meaning: "拿走(take)" },
     { word: "throw away", meaning: "扔掉(throw)" },
