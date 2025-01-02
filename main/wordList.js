@@ -456,7 +456,7 @@ export const wordList = [
     { word: "prefer A to B", meaning: "比起B更喜欢A(prefer)" },
     { word: "turn down", meaning: "拒绝;调低(turn)" },
     { word: "prefer doing A to doing B", meaning: "比起做B更喜欢做A(prefer)" },
-    { word: "prefer to do A rather than do B", meaning: "更喜欢A而不是B(prefer)" },
+    { word: "prefer to do A rather than do B", meaning: "宁愿做A,也不愿做B(prefer)" },
     { word: "make friends with sb.", meaning: "与…交朋友(make)" },
     { word: "put off", meaning: "推迟(put)" },
     { word: "cut off", meaning: "切断(cut)" },
